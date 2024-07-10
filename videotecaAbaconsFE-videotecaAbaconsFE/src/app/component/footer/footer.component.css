@@ -1,0 +1,10 @@
+.custom-footer {
+    height: 25px; /* Altezza del footer */
+    padding: 3px 0; /* Padding ridotto */
+    font-size: 9px; /* Dimensione del font */
+    background-color: #f8f9fa; /* Colore di sfondo del footer */
+}
+.custom-footer p {
+    margin: 0; /* Rimuove i margini del paragrafo */
+    line-height: 30px; /* Allinea verticalmente il testo */
+}

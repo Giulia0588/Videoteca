@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <div>
+    <app-jumbotron [Titolo] = "titolo" [SottoTitolo]="sottotitolo" [Show]="false"></app-jumbotron>
+  </div>
+  <div>
+  
+    <p>Ciao {{ utente }},</p>
+      <p>
+        <select class="welcome-select" (change)="onNavigate($event)">
+          <option value="" disabled selected>Seleziona un'opzione</option>
+          <option value="/film">Film da scaricare</option>
+          <option value="/generi">Lista generi</option>
+          <option value="/interpreti">Lista interpreti</option>
+        </select>
+      </p>
+  </div>
+  <hr style="border-top: 5px solid black;">
+  <div class="container mt-5 mb-1">
+    <div class="row">
+      <div class="col text-center">
+        <h1 style="color: rgb(190, 185, 185);">SCEGLI IL FILM CHE PIU' TI PIACE</h1>
+        <p class="lead" style="color: rgb(190, 185, 185); text-align: center;">
+          Se i miei film fanno sentire infelice una persona in più, sento di aver fatto il mio lavoro. 
+          <br>- (Woody Allen) -
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr style="border-top: 5px solid black;">
+
+    <div class="container border-bottom border-3 mb-5">
+      <div class="col-6 col-md-6 px-4 mb-5 wow animate__animated animate__fadeInLeft d-flex rounded">
+        <div class="card flex-fill" style="background-color: rgb(168, 168, 168)">
+          <div class="card-body">
+            <h3 class="card-title">I migliori film da Oscar...</h3>
+            <p class="card-text">"Il cuore di una donna è un profondo oceano di segreti. Ma ora sapete che c’era un uomo di
+              nome
+              Jack Dawson, e che lui mi ha salvato, in tutti i modi in cui una persona può essere salvata. Non ho nemmeno
+              una sua
+              foto. Non ho niente di lui. Vive solo nei miei ricordi. <br>
+    
+              <br>
+              <br>
+              - (Dal film Titanic) -
+            </p><br>
+          </div>
+          <img src="assets/images/titanic-JackRose.jpg" class="card-img-bottom" alt="...">
+        </div>
+      </div>
+    
+    
+    
+    
+      <!-- Inizio seconda card -->
+      <div class="col-6 col-md-6 px-4 mb-5 wow animate__animated animate__fadeInRight d-flex rounded">
+        <div class="card flex-fill" style="background-color: rgb(168, 168, 168)">
+          <img src="assets/images/attimo_fuggente.jpg" class="card-img-bottom" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Quelli che hanno fatto la storia...</h3>
+            <p class="card-text">Non leggiamo e scriviamo poesie perché è carino: noi leggiamo e scriviamo poesie perché
+              siamo
+              membri della razza umana; e la razza umana è piena di passione. Medicina, legge, economia, ingegneria sono
+              nobili
+              professioni, necessarie al nostro sostentamento; ma la poesia, la bellezza, il romanticismo, l’amore, sono
+              queste le
+              cose che ci tengono in vita.
+              <br>
+              <br>
+              - L'attimo fuggente -
+            </p><br>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+    <hr style="border-top: 5px solid black;">
+    <div class="container mt-5 mb-1">
+      <div class="row">
+        <div class="col text-center">
+          <h1 style="color: rgb(190, 185, 185);">GLI ATTORI PIU' FAMOSI</h1>
+          <p class="lead" style="color: rgb(190, 185, 185); text-align: center;">
+            Ogni minuto che passa è un’occasione per rivoluzionare tutto completamente.
+            <br> (dal film Vanilla Sky)
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr style="border-top: 5px solid black;">
+  
+      <div class="container border-bottom border-3 mb-5">
+        <div class="col-6 col-md-6 px-4 mb-5 wow animate__animated animate__fadeInLeft d-flex rounded">
+          <div class="card flex-fill" style="background-color: rgb(168, 168, 168)">
+            <div class="card-body">
+              <h2 class="card-title">Adrien Brody</h2>
+              <p class="card-text">Adrien Nicholas Brody (New York, 14 aprile 1973) è un attore e produttore cinematografico 
+                statunitense. Le sue interpretazioni più note includono quelle in film come La sottile linea rossa (1998) di 
+                Terrence Malick, Il pianista (2002) di Roman Polanski, che gli valse l'Oscar al miglior attore protagonista, 
+                The Village (2004) di M. Night Shyamalan, King Kong (2005) di Peter Jackson, Midnight in Paris (2011) di 
+                Woody Allen e numerose collaborazioni col regista Wes Anderson a partire da Il treno per il Darjeeling (2007). <br>
+              
+                <br>
+                <br>
+                fonte: Wikipedia.
+              </p><br>
+            </div>
+            <img src="assets/images/adrien_brody.jpg" class="card-img-bottom" alt="...">
+          </div>
+        </div>
+      
+      
+      
+      
+        <!-- Inizio seconda card -->
+        <div class="col-6 col-md-6 px-4 mb-5 wow animate__animated animate__fadeInRight d-flex rounded">
+          <div class="card flex-fill" style="background-color: rgb(168, 168, 168)">
+            <img src="assets/images/anthony_hopkins.jpg" class="card-img-bottom" alt="...">
+            <div class="card-body">
+              <h1 class="card-title">Anthony Hopkins</h1>
+              <p class="card-text">Sir Philip Anthony Hopkins (Port Talbot, 31 dicembre 1937) è un attore britannico.
+
+                Interprete completo con studi di teatro classico[1] con esperienza al Cardiff College of Drama e al National 
+                Theatre di Laurence Olivier, pittore e musicista, dopo una lunga gavetta televisiva negli anni settanta partecipa 
+                sul grande schermo a diverse trasposizioni di opere classiche fino a ottenere la fama internazionale. Nel 1992 
+                vince il suo primo Premio Oscar al migliore attore protagonista con l'interpretazione di Hannibal Lecter nel film 
+                Il silenzio degli innocenti di Jonathan Demme, ruolo che ha ripreso anche nei successivi due film, Hannibal (2001) 
+                e Red Dragon (2002). Nel 2021 replica la vittoria grazie alla sua interpretazione in The Father - Nulla è come 
+                sembra. Ha ricevuto altre quattro candidature all'Oscar, rispettivamente per Quel che resta del giorno (1993), 
+                Gli intrighi del potere - Nixon (1995), Amistad (1997) e I due papi (2019).
+                <br>
+                <br>
+                fonte: Wikipedia.
+              </p><br>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    <!-- Fine seconda card -->
+
+    <p class="placeholder-glow">
+      <span class="placeholder col-12"></span>
+    </p>
+
+
+  <!--
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    // new WOW().init();
+    wow = new WOW(
+      {
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 210,
+        mobile: false,
+        //mobile:true, 
+        live: true
+      }
+    )
+    wow.init();
+  </script>
+  -->
+
+
+</body>
+</html>
+
+
+ 

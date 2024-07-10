@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+  
+    <form class="d-flex align-items-center" style="width: fit-content;"> <!-- Imposta la larghezza del form in base al contenuto -->
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search" style="width: 120px;"> <!-- Imposta una larghezza specifica per il campo di input -->
+        <button class="btn btn-outline-success btn-sm" type="submit" style="width: 80px;">Cerca</button> <!-- Imposta una larghezza specifica per il pulsante -->
+    </form>
+    <em><app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo" [Show]="false"></app-jumbotron></em>
+
+<!--<h1>Film in catalogo</h1> -->
+<table id="articoli" [border]="1"> 
+    
+    <thead>
+        <tr> 
+            <th>id</th> 
+            <th>descrizione</th>  
+        </tr> 
+    </thead>
+    <tbody> 
+        <tr *ngFor="let varGenere of generi">
+            <td>{{varGenere.idGenere}}</td> 
+            <td>{{varGenere.descrizione}}
+                        
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+

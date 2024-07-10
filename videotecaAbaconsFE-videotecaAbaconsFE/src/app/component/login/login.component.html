@@ -1,0 +1,23 @@
+    <app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo" [Show]="false"></app-jumbotron>
+        <div>
+            <label for="userId">User Id</label> 
+            <input type="text" id="userId" placeholder="Nome Utente" [(ngModel)]= "userId">
+    
+            <label for="password">Password</label> 
+            <input type="text" id="password" placeholder="Password" [(ngModel)]= "password"> 
+            <button (click)="gestAut()">Connetti</button>
+        </div>
+    
+    <div *ngIf="autenticato">Accesso consentito, benvenuto!</div>
+       <!--  <p>La tua userId è: {{userId}} e la tua password è: {{password}}</p> -->
+       <div *ngIf="errorInput"> 
+        {{errMsg}} 
+    </div>
+
+ 
+
+ 
+
+   
+ 
+

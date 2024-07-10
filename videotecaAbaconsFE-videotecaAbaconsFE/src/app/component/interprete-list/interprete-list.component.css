@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #000; /* Testo nero */
+    transition: background-color 0.3s; /* Effetto di transizione */
+}
+th {
+    background-color: #606060; /* Grigio medio per le intestazioni */
+}
+tr:nth-child(even) {
+    background-color: #707070; /* Grigio medio per le righe pari */
+}
+tr:nth-child(odd) {
+    background-color: #808080; /* Grigio scuro per le righe dispari */
+}
+tr:hover td {
+    background-color: #505050; /* Grigio ancora più scuro quando il cursore è sopra */
+}

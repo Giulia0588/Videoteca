@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="d-flex align-items-center" style="width: fit-content;"> <!-- Imposta la larghezza del form in base al contenuto -->
+        <input class="form-control form-control-sm me-2" type="text" placeholder="Search" aria-label="Search" style="width: 120px;" id="ricerca" [(ngModel)] ="ricerca" name="ricerca"> <!-- Imposta una larghezza specifica per il campo di input -->
+        <button class="btn btn-outline-success btn-sm" type="submit" style="width: 80px;" (click)="ngOnInit()">Cerca</button> <!-- Imposta una larghezza specifica per il pulsante -->
+    </form>
+    
+    <em><app-jumbotron [Titolo]="titolo" [SottoTitolo]="sottotitolo" [Show]="false"></app-jumbotron></em>
+
+    <!-- <h1>Film in catalogo</h1> -->
+    <div class="table-container">
+    <table id="articoli" [border]="1">
+        <thead>
+            <tr>
+                <th><u>ID</u></th>
+                <th><u>TITOLO</u></th>
+                <th><u>ANNO</u></th>
+                <th><u>GENERE</u></th>
+                <th><u>INTERPRETI</u></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let varFilm of films">
+                <td>{{varFilm.idFilm}}</td>
+                <td>{{varFilm.titolo}}
+                    <span *ngIf="!varFilm.titolo || varFilm.titolo.length === 0">-</span>
+                </td>
+                
+                <td>{{varFilm.anno}}
+                    <span *ngIf="!varFilm.anno || varFilm.anno.length === 0">-</span>
+                </td>
+                
+                <td>{{varFilm.genere?.descrizione}}
+                    <span *ngIf="!varFilm.genere || varFilm.genere?.descrizione?.length === 0">-</span>
+                </td>
+                
+                <td>
+                    <ng-container *ngIf="varFilm.interpreti && varFilm.interpreti.length > 0">
+                        <ng-container *ngFor="let interprete of varFilm.interpreti; let last = last">
+                            {{ interprete.nome }} {{ interprete.cognome }}<span *ngIf="!last">,</span>
+                        </ng-container>
+                    </ng-container>
+                    <span *ngIf="!varFilm.interpreti || varFilm.interpreti.length === 0">-</span>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
